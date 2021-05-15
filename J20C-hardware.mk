@@ -7,3 +7,4 @@ PRODUCT_PACKAGES += \
 # Hardware-specific init script
 PRODUCT_PACKAGES += \
     init.J20C.rc \
+    init.J20C.extra.rc \

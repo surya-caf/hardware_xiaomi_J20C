@@ -1,6 +1,15 @@
+// Hardware specific configuration
 prebuilt_etc {
     name: "init.J20C.rc",
     src: "init.J20C.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+// Configurations that are software specific
+prebuilt_etc {
+    name: "init.J20C.extra.rc",
+    src: "init.J20C.extra.rc",
     sub_dir: "init",
     vendor: true,
 }
