@@ -27,3 +27,8 @@ on fs
     # dt2w
     chown system system /proc/tp_gesture
     chmod 0644 /proc/tp_gesture
+
+on property:ro.boot.product.hardware.sku=surya
+    enable vendor.nfc_hal_service
+    enable secureelement-hal_1_2
+    enable nqnfc_2_0_hal_service
