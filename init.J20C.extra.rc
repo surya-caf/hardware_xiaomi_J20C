@@ -1,5 +1,18 @@
 on init
     chmod 777 /sys/class/power_supply/battery/system_temp_level
+
+on fs
+    mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
+    mkdir /mnt/vendor/persist/audio 0755 system system
+    mkdir /mnt/vendor/persist/haptics 0755 system system
+
+    chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
+    chown system system /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
+    chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
+    chown system system /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
+    chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
+    chown system system /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
 	
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
