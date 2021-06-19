@@ -28,3 +28,9 @@ on property:ro.boot.product.hardware.sku=surya
     enable vendor.nfc_hal_service
     enable secureelement-hal_1_2
     enable nqnfc_2_0_hal_service
+
+on property:ro.boot.product.hardware.sku=karna
+    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.xml bind
+    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.hce.xml bind
+    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.hcef.xml bind
+    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.uicc.xml bind
