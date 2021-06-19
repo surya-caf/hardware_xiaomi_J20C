@@ -18,6 +18,12 @@ on fs
     chown system system /proc/tp_gesture
     chmod 0644 /proc/tp_gesture
 
+    # white led
+    chown system system /sys/class/leds/red/delay_off
+    chmod 0644 /sys/class/leds/red/delay_off
+    chown system system /sys/class/leds/red/delay_on
+    chmod 0644 /sys/class/leds/red/delay_on
+
 on property:ro.boot.product.hardware.sku=surya
     enable vendor.nfc_hal_service
     enable secureelement-hal_1_2
