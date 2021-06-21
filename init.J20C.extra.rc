@@ -41,6 +41,9 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/kernel/sched_upmigrate 95
     write /proc/sys/kernel/sched_downmigrate 85
 
+    # Seems stupid but it's worth it
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1017600
+
 service mi_thermald /vendor/bin/mi_thermald
     class core
     user root
