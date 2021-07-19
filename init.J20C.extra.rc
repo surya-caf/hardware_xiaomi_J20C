@@ -1,6 +1,3 @@
-on init
-    chmod 777 /sys/class/power_supply/battery/system_temp_level
-
 on post-fs-data
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
